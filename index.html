@@ -105,25 +105,6 @@ section[id] {
   min-width: 0;
 }
 
-.brand-mark {
-  width: 116px;
-  height: 68px;
-  padding: 4px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: linear-gradient(160deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02));
-  box-shadow: var(--shadow-lg);
-}
-
-.brand-mark img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  border-radius: 16px;
-  background: #000;
-}
-
 .brand-copy strong,
 .brand-copy span {
   display: block;
@@ -141,6 +122,14 @@ section[id] {
   font-size: 0.82rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.brand-text-only .brand-copy strong {
+  font-size: 1.1rem;
+}
+
+.brand-text-only .brand-copy span {
+  margin-top: 4px;
 }
 
 .nav {
@@ -799,10 +788,7 @@ section {
 <body>
 <header class="site-header">
   <div class="container topbar">
-    <a class="brand" href="#inicio" aria-label="MGM Seguros">
-      <div class="brand-mark">
-        <img src="./logo-mgm.png" alt="MGM Asociados">
-      </div>
+    <a class="brand brand-text-only" href="#inicio" aria-label="MGM Seguros">
       <div class="brand-copy">
         <strong>MGM Seguros</strong>
         <span>Marcelo German Morel</span>
