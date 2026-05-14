@@ -511,31 +511,7 @@ section {
   letter-spacing: 0.02em;
 }
 
-.network-item img {
-  width: 100%;
-  max-width: 210px;
-  max-height: 64px;
-  object-fit: contain;
-}
-
-.network-item span {
-  display: block;
-}
-
-.network-item small {
-  color: var(--muted);
-  font-weight: 500;
-  letter-spacing: 0.02em;
-}
-
-.company-logo {
-  width: 100%;
-  min-height: 70px;
-  display: grid;
-  place-items: center;
-}
-
-.fallback-logo {
+.company-text {
   width: 100%;
   min-height: 64px;
   padding: 10px 12px;
@@ -543,19 +519,26 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
   color: var(--text);
-  font-weight: 700;
-  font-size: 0.95rem;
-  line-height: 1.2;
   display: grid;
   place-items: center;
+  text-align: center;
 }
 
-.fallback-logo span {
-  color: var(--muted);
-  font-size: 0.74rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
+.company-text strong,
+.company-text span {
+  display: block;
+}
+
+.company-text strong {
+  font-size: 0.98rem;
+}
+
+.company-text span {
   margin-top: 4px;
+  color: var(--gold);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .contact-grid {
@@ -641,18 +624,6 @@ section {
   color: var(--muted);
   text-align: center;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-@keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(26px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @media (max-width: 1080px) {
@@ -883,110 +854,124 @@ section {
         <div>
           <h2>Compañías que refuerzan la confianza</h2>
           <p>
-            Cada imagen está ubicada donde corresponde según los archivos que vos ya tenés cargados
-            en el repositorio.
+            Todas las tarjetas quedaron unificadas sin imágenes, con el mismo estilo prolijo de
+            SMG Life para mantener una estética limpia y consistente.
           </p>
         </div>
         <p class="section-note">
-          Donde no hay imagen disponible, queda una tarjeta limpia con el nombre correcto.
+          Así no dependés de archivos de logos ni se mezclan imágenes incorrectas.
         </p>
       </div>
 
       <div class="network">
         <div class="network-item">
-          <div class="company-logo">
-            <img src="./mgm-github-5.png" alt="SMG Seguros">
+          <div class="company-text">
+            <strong>SMG</strong>
+            <span>Seguros</span>
           </div>
           <span>SMG</span>
         </div>
 
         <div class="network-item">
-          <div class="company-logo">
-            <div class="fallback-logo">SMG ART <span>Compañía asociada</span></div>
+          <div class="company-text">
+            <strong>SMG ART</strong>
+            <span>Riesgos del trabajo</span>
           </div>
           <span>SMG ART</span>
         </div>
 
         <div class="network-item">
-          <div class="company-logo">
-            <div class="fallback-logo">SMG Life <span>Compañía asociada</span></div>
+          <div class="company-text">
+            <strong>SMG Life</strong>
+            <span>Seguros de vida</span>
           </div>
           <span>SMG Life</span>
         </div>
 
         <div class="network-item">
-          <div class="company-logo">
-            <img src="./mgm-github-8.png" alt="Mercantil Andina">
+          <div class="company-text">
+            <strong>Mercantil Andina</strong>
+            <span>Compañía</span>
           </div>
           <span>Mercantil Andina</span>
         </div>
 
         <div class="network-item">
-          <div class="company-logo">
-            <img src="./mgm-github-9.png" alt="Rivadavia">
+          <div class="company-text">
+            <strong>Rivadavia</strong>
+            <span>Seguros</span>
           </div>
           <span>Rivadavia</span>
         </div>
 
         <div class="network-item">
-          <div class="company-logo">
-            <img src="./mgm-github-6.png" alt="San Cristóbal Seguros">
+          <div class="company-text">
+            <strong>San Cristóbal</strong>
+            <span>Seguros</span>
           </div>
           <span>San Cristóbal</span>
         </div>
 
         <div class="network-item">
-          <div class="company-logo">
-            <div class="fallback-logo">Sancor <span>Seguros</span></div>
+          <div class="company-text">
+            <strong>Sancor</strong>
+            <span>Seguros</span>
           </div>
           <span>Sancor</span>
         </div>
 
         <div class="network-item">
-          <div class="company-logo">
-            <div class="fallback-logo">Tutelar <span>Compañía asociada</span></div>
+          <div class="company-text">
+            <strong>Tutelar</strong>
+            <span>Compañía asociada</span>
           </div>
           <span>Tutelar</span>
         </div>
 
         <div class="network-item">
-          <div class="company-logo">
-            <img src="./mgm-github-7.png" alt="Galicia Seguros">
+          <div class="company-text">
+            <strong>Galicia</strong>
+            <span>Seguros</span>
           </div>
           <span>Galicia</span>
         </div>
 
         <div class="network-item">
-          <div class="company-logo">
-            <img src="./mgm-github-1.png" alt="Zurich">
+          <div class="company-text">
+            <strong>Zurich</strong>
+            <span>Seguros</span>
           </div>
           <span>Zurich</span>
         </div>
 
         <div class="network-item">
-          <div class="company-logo">
-            <img src="./mgm-github-2.png" alt="Allianz">
+          <div class="company-text">
+            <strong>Allianz</strong>
+            <span>Seguros</span>
           </div>
           <span>Allianz</span>
         </div>
 
         <div class="network-item">
-          <div class="company-logo">
-            <div class="fallback-logo">Paraná <span>Seguros</span></div>
+          <div class="company-text">
+            <strong>Paraná</strong>
+            <span>Seguros</span>
           </div>
           <span>Paraná Seguros</span>
         </div>
 
         <div class="network-item">
-          <div class="company-logo">
-            <img src="./mgm-github-4.png" alt="Federación Patronal Seguros">
+          <div class="company-text">
+            <strong>Federación Patronal</strong>
+            <span>Seguros</span>
           </div>
           <span>Federación Patronal</span>
         </div>
 
         <div class="network-item">
-          <div class="company-logo">
-            <img src="./mgm-github-3.png" alt="Experta Seguros">
+          <div class="company-text">
+            <strong>Experta</strong>
+            <span>Seguros</span>
           </div>
           <span>Experta</span>
         </div>
