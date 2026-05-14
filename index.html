@@ -11,10 +11,8 @@
 <style>
 :root {
   --bg: #060607;
-  --bg-deep: #0d0e11;
   --surface: rgba(255, 255, 255, 0.05);
   --surface-strong: rgba(255, 255, 255, 0.08);
-  --surface-glass: rgba(255, 255, 255, 0.03);
   --line: rgba(255, 255, 255, 0.1);
   --line-soft: rgba(255, 255, 255, 0.06);
   --text: #f6f1ea;
@@ -111,7 +109,7 @@ section[id] {
 }
 
 .brand-copy strong {
-  font-size: 1.02rem;
+  font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -122,13 +120,6 @@ section[id] {
   font-size: 0.82rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-}
-
-.brand-text-only .brand-copy strong {
-  font-size: 1.1rem;
-}
-
-.brand-text-only .brand-copy span {
   margin-top: 4px;
 }
 
@@ -544,7 +535,7 @@ section {
 
 .network-item {
   padding: 18px 16px;
-  min-height: 132px;
+  min-height: 144px;
   display: grid;
   align-content: center;
   justify-items: center;
@@ -568,7 +559,7 @@ section {
 .network-item img {
   width: 100%;
   max-width: 210px;
-  max-height: 62px;
+  max-height: 64px;
   object-fit: contain;
 }
 
@@ -580,6 +571,36 @@ section {
   color: var(--muted);
   font-weight: 500;
   letter-spacing: 0.02em;
+}
+
+.company-logo {
+  width: 100%;
+  min-height: 70px;
+  display: grid;
+  place-items: center;
+}
+
+.fallback-logo {
+  display: none;
+  width: 100%;
+  min-height: 64px;
+  padding: 10px 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  place-items: center;
+}
+
+.fallback-logo span {
+  color: var(--muted);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 4px;
 }
 
 .contact-grid {
@@ -788,7 +809,7 @@ section {
 <body>
 <header class="site-header">
   <div class="container topbar">
-    <a class="brand brand-text-only" href="#inicio" aria-label="MGM Seguros">
+    <a class="brand" href="#inicio" aria-label="MGM Seguros">
       <div class="brand-copy">
         <strong>MGM Seguros</strong>
         <span>Marcelo German Morel</span>
@@ -813,9 +834,9 @@ section {
             <p class="kicker">MGM Asociados</p>
             <h1>Seguros con presencia, criterio y nivel premium.</h1>
             <p class="lead">
-              Una presentacion mas refinada para una marca que necesita transmitir solvencia,
-              confianza y categoria. El foco esta puesto en asesorar con precision, ofrecer
-              opciones serias y sostener una experiencia de atencion que inspire seguridad.
+              Una presentación refinada para una marca que necesita transmitir solvencia,
+              confianza y categoría. El foco está puesto en asesorar con precisión, ofrecer
+              opciones serias y sostener una experiencia de atención que inspire seguridad.
             </p>
 
             <div class="hero-actions">
@@ -825,16 +846,16 @@ section {
 
             <div class="hero-metrics">
               <div class="metric">
-                <strong>Atencion de alto nivel</strong>
+                <strong>Atención de alto nivel</strong>
                 <span>Trato directo, claro y personalizado en cada consulta.</span>
               </div>
               <div class="metric">
-                <strong>Multiples opciones</strong>
-                <span>Comparacion real entre compañías para elegir mejor.</span>
+                <strong>Múltiples opciones</strong>
+                <span>Comparación real entre compañías para elegir mejor.</span>
               </div>
               <div class="metric">
                 <strong>Imagen premium</strong>
-                <span>Una presencia digital mas solida, elegante y profesional.</span>
+                <span>Una presencia digital más sólida, elegante y profesional.</span>
               </div>
             </div>
           </div>
@@ -845,26 +866,26 @@ section {
             </div>
 
             <div class="side-copy">
-              <h2>Asesoramiento integral con una identidad mas exclusiva</h2>
+              <h2>Asesoramiento integral con una identidad más exclusiva</h2>
               <p>
-                La pagina ahora pone a la marca en un nivel mucho mas alto: composicion editorial,
-                detalles visuales finos, jerarquia fuerte y una atmosfera premium que ayuda a que
-                cada parte del mensaje se vea mas confiable.
+                La página pone a la marca en un nivel mucho más alto: composición editorial,
+                detalles visuales finos, jerarquía fuerte y una atmósfera premium que ayuda a que
+                cada parte del mensaje se vea más confiable.
               </p>
             </div>
 
             <div class="signature-list">
               <div class="signature-item">
-                <strong>Decision bien guiada</strong>
-                <span>Analisis de alternativas para encontrar la cobertura adecuada.</span>
+                <strong>Decisión bien guiada</strong>
+                <span>Análisis de alternativas para encontrar la cobertura adecuada.</span>
               </div>
               <div class="signature-item">
                 <strong>Presencia distinguida</strong>
-                <span>Una estetica mas seria, elegante y memorable.</span>
+                <span>Una estética más seria, elegante y memorable.</span>
               </div>
               <div class="signature-item">
-                <strong>Canal directo y rapido</strong>
-                <span>Contacto inmediato por WhatsApp, telefono o correo.</span>
+                <strong>Canal directo y rápido</strong>
+                <span>Contacto inmediato por WhatsApp, teléfono o correo.</span>
               </div>
             </div>
           </aside>
@@ -877,10 +898,10 @@ section {
     <div class="container">
       <div class="section-intro">
         <div>
-          <h2>Coberturas presentadas con estandar internacional</h2>
+          <h2>Coberturas presentadas con estándar internacional</h2>
           <p>
-            Cada bloque fue pensado para que se sienta importante, con mas aire, mas contraste y
-            una estructura visual que eleva la percepcion de la marca desde el primer segundo.
+            Cada bloque fue pensado para que se sienta importante, con más aire, más contraste y
+            una estructura visual que eleva la percepción de la marca desde el primer segundo.
           </p>
         </div>
         <p class="section-note">
@@ -893,8 +914,8 @@ section {
           <span class="card-label">Movilidad</span>
           <h3>Seguro de Auto</h3>
           <p>
-            Una propuesta clara para proteger tu vehiculo con alternativas serias, respaldo
-            concreto y una presentacion mucho mas contundente de la cobertura.
+            Una propuesta clara para proteger tu vehículo con alternativas serias, respaldo
+            concreto y una presentación mucho más contundente de la cobertura.
           </p>
           <div class="card-accent">A</div>
         </article>
@@ -903,8 +924,8 @@ section {
           <span class="card-label">Patrimonio</span>
           <h3>Seguro de Hogar</h3>
           <p>
-            Soluciones para cuidar vivienda y bienes con una estetica mas sofisticada y una lectura
-            mas limpia del servicio.
+            Soluciones para cuidar vivienda y bienes con una estética más sofisticada y una lectura
+            más limpia del servicio.
           </p>
           <div class="card-accent">H</div>
         </article>
@@ -913,8 +934,8 @@ section {
           <span class="card-label">Empresas</span>
           <h3>ART</h3>
           <p>
-            Coberturas para trabajadores y empresas explicadas con mas presencia visual y una
-            sensacion de mayor respaldo institucional.
+            Coberturas para trabajadores y empresas explicadas con más presencia visual y una
+            sensación de mayor respaldo institucional.
           </p>
           <div class="card-accent">R</div>
         </article>
@@ -929,20 +950,20 @@ section {
           </p>
         </div>
         <p class="section-note">
-          La propuesta combina variedad, respaldo y una presentacion clara de cada linea de seguro.
+          La propuesta combina variedad, respaldo y una presentación clara de cada línea de seguro.
         </p>
       </div>
 
       <div class="network">
         <div class="network-item">Automotor</div>
-        <div class="network-item">Moto vehiculos</div>
+        <div class="network-item">Moto vehículos</div>
         <div class="network-item">Combinados familiares</div>
         <div class="network-item">Integrales de comercio y consorcio</div>
         <div class="network-item">ART</div>
         <div class="network-item">Accidentes personales</div>
         <div class="network-item">Incendio</div>
         <div class="network-item">Mala praxis</div>
-        <div class="network-item">Caucion</div>
+        <div class="network-item">Caución</div>
       </div>
     </div>
   </section>
@@ -953,83 +974,123 @@ section {
         <div>
           <h2>Compañías que refuerzan la confianza</h2>
           <p>
-            La red de aseguradoras se muestra con una grilla mas ordenada y premium para transmitir
-            amplitud, respaldo y capacidad de comparacion.
+            Cada logo fue ubicado en su compañía correcta. Cuando no exista archivo cargado,
+            la tarjeta igual queda prolija con un respaldo visual limpio y acorde al nombre.
           </p>
         </div>
         <p class="section-note">
-          Una mejor puesta en escena hace que la propuesta se sienta mucho mas consolidada.
+          La intención es que ninguna imagen quede cruzada con otra compañía.
         </p>
       </div>
 
       <div class="network">
         <div class="network-item">
-          <img src="./mgm-github-5.png" alt="SMG Seguros">
+          <div class="company-logo">
+            <img src="./mgm-github-5.png" alt="SMG Seguros" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+            <div class="fallback-logo">SMG <span>Seguros</span></div>
+          </div>
           <span>SMG</span>
         </div>
 
         <div class="network-item">
-          <img src="./WhatsApp Image 2026-05-14 at 14.25.54.jpeg" alt="SMG ART">
+          <div class="company-logo">
+            <img src="./WhatsApp Image 2026-05-14 at 14.25.54.jpeg" alt="SMG ART" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+            <div class="fallback-logo">SMG ART <span>Riesgos del trabajo</span></div>
+          </div>
           <span>SMG ART</span>
         </div>
 
         <div class="network-item">
-          <img src="./WhatsApp Image 2026-05-14 at 14.25.52.jpeg" alt="SMG Life">
+          <div class="company-logo">
+            <img src="./WhatsApp Image 2026-05-14 at 14.25.52.jpeg" alt="SMG Life" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+            <div class="fallback-logo">SMG Life <span>Seguros de vida</span></div>
+          </div>
           <span>SMG Life</span>
         </div>
 
         <div class="network-item">
-          <img src="./mgm-github-8.png" alt="Mercantil Andina">
+          <div class="company-logo">
+            <img src="./mgm-github-8.png" alt="Mercantil Andina" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+            <div class="fallback-logo">Mercantil Andina <span>Compañía</span></div>
+          </div>
           <span>Mercantil Andina</span>
         </div>
 
         <div class="network-item">
-          <img src="./mgm-github-9.png" alt="Rivadavia">
+          <div class="company-logo">
+            <img src="./mgm-github-9.png" alt="Rivadavia" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+            <div class="fallback-logo">Rivadavia <span>Seguros</span></div>
+          </div>
           <span>Rivadavia</span>
         </div>
 
         <div class="network-item">
-          <img src="./mgm-github-6.png" alt="San Cristóbal Seguros">
+          <div class="company-logo">
+            <img src="./mgm-github-6.png" alt="San Cristóbal Seguros" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+            <div class="fallback-logo">San Cristóbal <span>Seguros</span></div>
+          </div>
           <span>San Cristóbal</span>
         </div>
 
         <div class="network-item">
-          <img src="./mgm-github-11.png" alt="Sancor Seguros">
+          <div class="company-logo">
+            <img src="./mgm-github-11.png" alt="Sancor Seguros" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+            <div class="fallback-logo">Sancor <span>Seguros</span></div>
+          </div>
           <span>Sancor</span>
         </div>
 
         <div class="network-item">
+          <div class="company-logo">
+            <div class="fallback-logo" style="display:grid;">Tutelar <span>Compañía asociada</span></div>
+          </div>
           <span>Tutelar</span>
-          <small>Compañía asociada</small>
         </div>
 
         <div class="network-item">
-          <img src="./mgm-github-7.png" alt="Galicia Seguros">
+          <div class="company-logo">
+            <img src="./mgm-github-7.png" alt="Galicia Seguros" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+            <div class="fallback-logo">Galicia <span>Seguros</span></div>
+          </div>
           <span>Galicia</span>
         </div>
 
         <div class="network-item">
-          <img src="./mgm-github-1.png" alt="Zurich">
+          <div class="company-logo">
+            <img src="./mgm-github-1.png" alt="Zurich" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+            <div class="fallback-logo">Zurich <span>Seguros</span></div>
+          </div>
           <span>Zurich</span>
         </div>
 
         <div class="network-item">
-          <img src="./mgm-github-2.png" alt="Allianz">
+          <div class="company-logo">
+            <img src="./mgm-github-2.png" alt="Allianz" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+            <div class="fallback-logo">Allianz <span>Seguros</span></div>
+          </div>
           <span>Allianz</span>
         </div>
 
         <div class="network-item">
+          <div class="company-logo">
+            <div class="fallback-logo" style="display:grid;">Paraná <span>Seguros</span></div>
+          </div>
           <span>Paraná Seguros</span>
-          <small>Compañía asociada</small>
         </div>
 
         <div class="network-item">
-          <img src="./mgm-github-4.png" alt="Federación Patronal Seguros">
+          <div class="company-logo">
+            <img src="./mgm-github-4.png" alt="Federación Patronal Seguros" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+            <div class="fallback-logo">Federación Patronal <span>Seguros</span></div>
+          </div>
           <span>Federación Patronal</span>
         </div>
 
         <div class="network-item">
-          <img src="./mgm-github-3.png" alt="Experta Seguros">
+          <div class="company-logo">
+            <img src="./mgm-github-3.png" alt="Experta Seguros" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
+            <div class="fallback-logo">Experta <span>Seguros</span></div>
+          </div>
           <span>Experta</span>
         </div>
       </div>
@@ -1043,7 +1104,7 @@ section {
           <div>
             <h2>Contacto con tono ejecutivo</h2>
             <p>
-              La seccion final tambien sube de nivel para cerrar la experiencia con una imagen mas
+              La sección final también sube de nivel para cerrar la experiencia con una imagen más
               premium, limpia y confiable.
             </p>
           </div>
@@ -1055,11 +1116,11 @@ section {
             <a href="mailto:mgmseguros@hotmail.com">mgmseguros@hotmail.com</a>
           </div>
           <div class="contact-row">
-            <strong>Telefono</strong>
+            <strong>Teléfono</strong>
             <a href="tel:+5491156610267">+54 9 11 5661-0267</a>
           </div>
           <div class="contact-row">
-            <strong>Direccion</strong>
+            <strong>Dirección</strong>
             <span>Av. Rodriguez Pena 2060, Santos Lugares</span>
           </div>
         </div>
@@ -1068,8 +1129,8 @@ section {
       <aside class="contact-cta">
         <h2>Conversemos hoy</h2>
         <p>
-          Si queres cotizar o elevar la forma en que presentas tus servicios, el acceso principal
-          queda resuelto con una llamada a la accion clara y elegante.
+          Si querés cotizar o elevar la forma en que presentás tus servicios, el acceso principal
+          queda resuelto con una llamada a la acción clara y elegante.
         </p>
         <a class="btn" href="https://wa.me/5491156610267" target="_blank" rel="noreferrer">Escribir por WhatsApp</a>
       </aside>
