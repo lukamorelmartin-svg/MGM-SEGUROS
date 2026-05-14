@@ -197,7 +197,6 @@ section[id] {
 
 .hero-copy {
   padding: 58px 54px 54px;
-  animation: fade-up 0.9s ease both;
 }
 
 .kicker {
@@ -329,18 +328,6 @@ h1 {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)),
     radial-gradient(circle at center, rgba(201, 165, 111, 0.08), transparent 44%);
-  animation: fade-up 1.05s ease both;
-}
-
-.hero-side::after {
-  content: "";
-  position: absolute;
-  inset: auto -14% -10% auto;
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(201, 165, 111, 0.16), transparent 68%);
-  filter: blur(24px);
 }
 
 .logo-frame {
@@ -354,17 +341,7 @@ h1 {
     linear-gradient(180deg, rgba(145, 23, 45, 0.16), transparent 48%);
 }
 
-.logo-frame::before {
-  content: "";
-  position: absolute;
-  inset: -35% -40%;
-  background: linear-gradient(115deg, transparent 42%, rgba(255, 255, 255, 0.13) 50%, transparent 58%);
-  animation: shine 6s linear infinite;
-}
-
 .logo-frame img {
-  position: relative;
-  z-index: 1;
   width: 100%;
   aspect-ratio: 2.6 / 1;
   object-fit: contain;
@@ -374,8 +351,6 @@ h1 {
 }
 
 .side-copy {
-  position: relative;
-  z-index: 1;
   margin-top: 24px;
 }
 
@@ -465,20 +440,6 @@ section {
     linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03)),
     radial-gradient(circle at top right, rgba(209, 36, 66, 0.14), transparent 36%);
   box-shadow: var(--shadow-lg);
-  transition: transform 0.28s ease, border-color 0.28s ease, background 0.28s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(201, 165, 111, 0.24);
-}
-
-.card::after {
-  content: "";
-  position: absolute;
-  inset: auto 0 0 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(201, 165, 111, 0.5), transparent);
 }
 
 .card-large {
@@ -548,12 +509,6 @@ section {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;
   letter-spacing: 0.02em;
-  transition: transform 0.25s ease, border-color 0.25s ease;
-}
-
-.network-item:hover {
-  transform: translateY(-4px);
-  border-color: rgba(201, 165, 111, 0.24);
 }
 
 .network-item img {
@@ -581,7 +536,6 @@ section {
 }
 
 .fallback-logo {
-  display: none;
   width: 100%;
   min-height: 64px;
   padding: 10px 12px;
@@ -592,6 +546,7 @@ section {
   font-weight: 700;
   font-size: 0.95rem;
   line-height: 1.2;
+  display: grid;
   place-items: center;
 }
 
@@ -662,17 +617,6 @@ section {
   align-content: center;
 }
 
-.contact-cta::before {
-  content: "";
-  position: absolute;
-  inset: auto auto -18% -12%;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(201, 165, 111, 0.16), transparent 66%);
-  filter: blur(20px);
-}
-
 .contact-cta h2 {
   margin-bottom: 14px;
   font-size: 2.1rem;
@@ -699,21 +643,6 @@ section {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.reveal-1 {
-  animation: fade-up 1s ease both;
-  animation-delay: 0.1s;
-}
-
-.reveal-2 {
-  animation: fade-up 1s ease both;
-  animation-delay: 0.2s;
-}
-
-.reveal-3 {
-  animation: fade-up 1s ease both;
-  animation-delay: 0.3s;
-}
-
 @keyframes fade-up {
   from {
     opacity: 0;
@@ -723,26 +652,6 @@ section {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes shine {
-  from {
-    transform: translateX(-36%) rotate(10deg);
-  }
-
-  to {
-    transform: translateX(42%) rotate(10deg);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
-    scroll-behavior: auto !important;
   }
 }
 
@@ -910,7 +819,7 @@ section {
       </div>
 
       <div class="showcase">
-        <article class="card card-large reveal-1">
+        <article class="card card-large">
           <span class="card-label">Movilidad</span>
           <h3>Seguro de Auto</h3>
           <p>
@@ -920,7 +829,7 @@ section {
           <div class="card-accent">A</div>
         </article>
 
-        <article class="card card-medium reveal-2">
+        <article class="card card-medium">
           <span class="card-label">Patrimonio</span>
           <h3>Seguro de Hogar</h3>
           <p>
@@ -930,7 +839,7 @@ section {
           <div class="card-accent">H</div>
         </article>
 
-        <article class="card card-medium reveal-3">
+        <article class="card card-medium">
           <span class="card-label">Empresas</span>
           <h3>ART</h3>
           <p>
@@ -974,67 +883,60 @@ section {
         <div>
           <h2>Compañías que refuerzan la confianza</h2>
           <p>
-            Cada logo fue ubicado en su compañía correcta. Cuando no exista archivo cargado,
-            la tarjeta igual queda prolija con un respaldo visual limpio y acorde al nombre.
+            Cada imagen está ubicada donde corresponde según los archivos que vos ya tenés cargados
+            en el repositorio.
           </p>
         </div>
         <p class="section-note">
-          La intención es que ninguna imagen quede cruzada con otra compañía.
+          Donde no hay imagen disponible, queda una tarjeta limpia con el nombre correcto.
         </p>
       </div>
 
       <div class="network">
         <div class="network-item">
           <div class="company-logo">
-            <img src="./mgm-github-5.png" alt="SMG Seguros" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
-            <div class="fallback-logo">SMG <span>Seguros</span></div>
+            <img src="./mgm-github-5.png" alt="SMG Seguros">
           </div>
           <span>SMG</span>
         </div>
 
         <div class="network-item">
           <div class="company-logo">
-            <img src="./WhatsApp Image 2026-05-14 at 14.25.54.jpeg" alt="SMG ART" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
-            <div class="fallback-logo">SMG ART <span>Riesgos del trabajo</span></div>
+            <div class="fallback-logo">SMG ART <span>Compañía asociada</span></div>
           </div>
           <span>SMG ART</span>
         </div>
 
         <div class="network-item">
           <div class="company-logo">
-            <img src="./WhatsApp Image 2026-05-14 at 14.25.52.jpeg" alt="SMG Life" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
-            <div class="fallback-logo">SMG Life <span>Seguros de vida</span></div>
+            <div class="fallback-logo">SMG Life <span>Compañía asociada</span></div>
           </div>
           <span>SMG Life</span>
         </div>
 
         <div class="network-item">
           <div class="company-logo">
-            <img src="./mgm-github-8.png" alt="Mercantil Andina" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
-            <div class="fallback-logo">Mercantil Andina <span>Compañía</span></div>
+            <img src="./mgm-github-8.png" alt="Mercantil Andina">
           </div>
           <span>Mercantil Andina</span>
         </div>
 
         <div class="network-item">
           <div class="company-logo">
-            <img src="./mgm-github-9.png" alt="Rivadavia" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
-            <div class="fallback-logo">Rivadavia <span>Seguros</span></div>
+            <img src="./mgm-github-9.png" alt="Rivadavia">
           </div>
           <span>Rivadavia</span>
         </div>
 
         <div class="network-item">
           <div class="company-logo">
-            <img src="./mgm-github-6.png" alt="San Cristóbal Seguros" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
-            <div class="fallback-logo">San Cristóbal <span>Seguros</span></div>
+            <img src="./mgm-github-6.png" alt="San Cristóbal Seguros">
           </div>
           <span>San Cristóbal</span>
         </div>
 
         <div class="network-item">
           <div class="company-logo">
-            <img src="./mgm-github-11.png" alt="Sancor Seguros" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
             <div class="fallback-logo">Sancor <span>Seguros</span></div>
           </div>
           <span>Sancor</span>
@@ -1042,54 +944,49 @@ section {
 
         <div class="network-item">
           <div class="company-logo">
-            <div class="fallback-logo" style="display:grid;">Tutelar <span>Compañía asociada</span></div>
+            <div class="fallback-logo">Tutelar <span>Compañía asociada</span></div>
           </div>
           <span>Tutelar</span>
         </div>
 
         <div class="network-item">
           <div class="company-logo">
-            <img src="./mgm-github-7.png" alt="Galicia Seguros" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
-            <div class="fallback-logo">Galicia <span>Seguros</span></div>
+            <img src="./mgm-github-7.png" alt="Galicia Seguros">
           </div>
           <span>Galicia</span>
         </div>
 
         <div class="network-item">
           <div class="company-logo">
-            <img src="./mgm-github-1.png" alt="Zurich" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
-            <div class="fallback-logo">Zurich <span>Seguros</span></div>
+            <img src="./mgm-github-1.png" alt="Zurich">
           </div>
           <span>Zurich</span>
         </div>
 
         <div class="network-item">
           <div class="company-logo">
-            <img src="./mgm-github-2.png" alt="Allianz" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
-            <div class="fallback-logo">Allianz <span>Seguros</span></div>
+            <img src="./mgm-github-2.png" alt="Allianz">
           </div>
           <span>Allianz</span>
         </div>
 
         <div class="network-item">
           <div class="company-logo">
-            <div class="fallback-logo" style="display:grid;">Paraná <span>Seguros</span></div>
+            <div class="fallback-logo">Paraná <span>Seguros</span></div>
           </div>
           <span>Paraná Seguros</span>
         </div>
 
         <div class="network-item">
           <div class="company-logo">
-            <img src="./mgm-github-4.png" alt="Federación Patronal Seguros" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
-            <div class="fallback-logo">Federación Patronal <span>Seguros</span></div>
+            <img src="./mgm-github-4.png" alt="Federación Patronal Seguros">
           </div>
           <span>Federación Patronal</span>
         </div>
 
         <div class="network-item">
           <div class="company-logo">
-            <img src="./mgm-github-3.png" alt="Experta Seguros" onerror="this.style.display='none';this.nextElementSibling.style.display='grid';">
-            <div class="fallback-logo">Experta <span>Seguros</span></div>
+            <img src="./mgm-github-3.png" alt="Experta Seguros">
           </div>
           <span>Experta</span>
         </div>
