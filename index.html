@@ -3,10 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta
-  name="description"
-  content="MGM Seguros. Marcelo German Morel. Asesoramiento premium en seguros para autos, hogar, ART y coberturas para personas y empresas."
->
+<meta name="description" content="MGM Seguros. Marcelo German Morel. Asesoramiento premium en seguros para autos, hogar, ART y coberturas para personas y empresas.">
 <title>MGM Seguros</title>
 <style>
 :root {
@@ -197,6 +194,7 @@ section[id] {
 
 .hero-copy {
   padding: 58px 54px 54px;
+  animation: fade-up 0.9s ease both;
 }
 
 .kicker {
@@ -328,6 +326,18 @@ h1 {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)),
     radial-gradient(circle at center, rgba(201, 165, 111, 0.08), transparent 44%);
+  animation: fade-up 1.05s ease both;
+}
+
+.hero-side::after {
+  content: "";
+  position: absolute;
+  inset: auto -14% -10% auto;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 165, 111, 0.16), transparent 68%);
+  filter: blur(24px);
 }
 
 .logo-frame {
@@ -351,6 +361,8 @@ h1 {
 }
 
 .side-copy {
+  position: relative;
+  z-index: 1;
   margin-top: 24px;
 }
 
@@ -440,6 +452,20 @@ section {
     linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03)),
     radial-gradient(circle at top right, rgba(209, 36, 66, 0.14), transparent 36%);
   box-shadow: var(--shadow-lg);
+  transition: transform 0.28s ease, border-color 0.28s ease, background 0.28s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(201, 165, 111, 0.24);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 165, 111, 0.5), transparent);
 }
 
 .card-large {
@@ -509,6 +535,12 @@ section {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 700;
   letter-spacing: 0.02em;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.network-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(201, 165, 111, 0.24);
 }
 
 .company-text {
@@ -626,6 +658,18 @@ section {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 1080px) {
   .hero-grid,
   .section-intro,
@@ -720,7 +764,7 @@ section {
             </p>
 
             <div class="hero-actions">
-              <a class="btn" href="https://wa.me/5491156610267" target="_blank" rel="noreferrer">Solicitar asesoramiento</a>
+              <a class="btn" href="https://wa.me/52528899" target="_blank" rel="noreferrer">Solicitar asesoramiento</a>
               <a class="btn-secondary" href="#servicios">Explorar coberturas</a>
             </div>
 
@@ -844,6 +888,9 @@ section {
         <div class="network-item">Incendio</div>
         <div class="network-item">Mala praxis</div>
         <div class="network-item">Caución</div>
+        <div class="network-item">Seguro técnico</div>
+        <div class="network-item">RC profesional</div>
+        <div class="network-item">Transporte</div>
       </div>
     </div>
   </section>
@@ -854,12 +901,12 @@ section {
         <div>
           <h2>Compañías que refuerzan la confianza</h2>
           <p>
-            Todas las tarjetas quedaron unificadas sin imágenes, con el mismo estilo prolijo de
-            SMG Life para mantener una estética limpia y consistente.
+            Todas las tarjetas están presentadas de forma uniforme y prolija, sin depender de
+            imágenes para que la vista quede limpia y consistente.
           </p>
         </div>
         <p class="section-note">
-          Así no dependés de archivos de logos ni se mezclan imágenes incorrectas.
+          Así ninguna compañía queda cruzada ni con un logo que no le corresponde.
         </p>
       </div>
 
@@ -975,6 +1022,30 @@ section {
           </div>
           <span>Experta</span>
         </div>
+
+        <div class="network-item">
+          <div class="company-text">
+            <strong>Experta ART</strong>
+            <span>Riesgos del trabajo</span>
+          </div>
+          <span>Experta ART</span>
+        </div>
+
+        <div class="network-item">
+          <div class="company-text">
+            <strong>Berkley</strong>
+            <span>Seguros</span>
+          </div>
+          <span>Berkley</span>
+        </div>
+
+        <div class="network-item">
+          <div class="company-text">
+            <strong>RUS</strong>
+            <span>Seguros</span>
+          </div>
+          <span>RUS</span>
+        </div>
       </div>
     </div>
   </section>
@@ -994,16 +1065,24 @@ section {
 
         <div class="contact-list">
           <div class="contact-row">
-            <strong>Email</strong>
-            <a href="mailto:mgmseguros@hotmail.com">mgmseguros@hotmail.com</a>
+            <strong>Administración</strong>
+            <a href="mailto:Mgm@mgmseguros.com.ar">Mgm@mgmseguros.com.ar</a>
+          </div>
+          <div class="contact-row">
+            <strong>Gerente</strong>
+            <a href="mailto:Marcelo@mgmseguros.com.ar">Marcelo@mgmseguros.com.ar</a>
+          </div>
+          <div class="contact-row">
+            <strong>Cobranza</strong>
+            <a href="mailto:Cobranza@mgmseguros.com.ar">Cobranza@mgmseguros.com.ar</a>
+          </div>
+          <div class="contact-row">
+            <strong>Siniestros</strong>
+            <a href="mailto:Siniestros@mgmseguros.com.ar">Siniestros@mgmseguros.com.ar</a>
           </div>
           <div class="contact-row">
             <strong>Teléfono</strong>
-            <a href="tel:+5491156610267">+54 9 11 5661-0267</a>
-          </div>
-          <div class="contact-row">
-            <strong>Dirección</strong>
-            <span>Av. Rodriguez Pena 2060, Santos Lugares</span>
+            <a href="tel:52528899">52528899</a>
           </div>
         </div>
       </div>
@@ -1014,7 +1093,7 @@ section {
           Si querés cotizar o elevar la forma en que presentás tus servicios, el acceso principal
           queda resuelto con una llamada a la acción clara y elegante.
         </p>
-        <a class="btn" href="https://wa.me/5491156610267" target="_blank" rel="noreferrer">Escribir por WhatsApp</a>
+        <a class="btn" href="https://wa.me/52528899" target="_blank" rel="noreferrer">Escribir por WhatsApp</a>
       </aside>
     </div>
   </section>
